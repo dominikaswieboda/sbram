@@ -1,0 +1,20 @@
+//Global
+@import "global/normalize";
+@import "global/settings";
+@import "global/fonts";
+@import "global/layout";
+
+//Components
+@import "components/headings";
+@import "components/buttons";
+@import "components/animate";
+@import "components/card";
+@import "components/form";
+
+//Sections
+@import "sections/header";
+@import "sections/about";
+@import "sections/offers";
+@import "sections/banner";
+@import "sections/contact";
+@import "sections/footer";

@@ -1,0 +1,95 @@
+
+html, body {
+    overflow-x: hidden;
+}
+  body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $bg-main;
+  color: $text-main;
+  @media (max-width: 1280px) {
+    font-size: 14px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 1210px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (max-width: 1280px) {
+    width: 790px;
+  }
+  @media (max-width: 956px) {
+    width: 600px;
+  }
+  @media (max-width: 768px) {
+    width: 420px;
+  }
+  @media (max-width: 480px) {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+  }
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: $white;
+  cursor: pointer;
+}
+h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 110px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.info-page {
+  padding: 200px 0;
+  max-width: 726px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 18px;
+  span {
+    word-break: break-all;
+  }
+}
+
+.error {
+  font-size: 12px;
+  color: $red;
+  display: block;
+}

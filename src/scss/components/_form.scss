@@ -1,0 +1,89 @@
+.form {
+    &-group {
+        margin-bottom: 16px;
+    }
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+        & > div {
+            width: calc((100% / 2) - 5px);
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+    &-control {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: $white;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        &:focus {
+            outline: none;
+        }
+        &.error {
+            border-color: $red;
+        }
+        &--textarea {
+            resize: none;
+        }
+    }
+    &-label {
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 14px;
+        position: relative;
+        a {
+            color: $black;
+            font-weight: 700;
+            transition: $transition-base;
+            &:hover {
+                color: $red;
+            }
+        }
+        &::before {
+            content:'';
+            background-color: transparent;
+            border: 2px solid $black;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+    }
+    input[type=checkbox] {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        cursor: pointer;
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    input:checked + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 9px;
+        width: 6px;
+        height: 14px;
+        border: solid $black;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    
+}

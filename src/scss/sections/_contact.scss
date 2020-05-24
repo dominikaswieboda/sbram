@@ -1,0 +1,28 @@
+.contact {
+    background-color: $white;
+    &__content {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    .card {
+        @media (max-width: 768px) {
+            padding-top: 0;
+        }
+        &__item {
+            text-align: center;
+            @media (max-width: 1280px) {
+            width: calc((100% / 3) - 20px);
+             }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            a {
+                color: $text-main;
+                transition: $transition-base;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

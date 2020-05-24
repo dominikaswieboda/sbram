@@ -1,0 +1,50 @@
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 48px;
+  color: $black;
+  margin-bottom: 0px;
+}
+
+h2 {
+  position: relative;
+  font-weight: 600;
+  font-size: 32px;
+  color: $text-main;
+  margin-bottom: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 12%;
+    height: 2px;
+    background-color: $red;
+    left: 50%;
+    top: 135%;
+    transform: translateX(-50%);
+  }
+}
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: $text-lightest;
+  margin-bottom: 50px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $dark-grey;
+  margin-bottom: 20px;
+}
+
+.typing {
+  margin-top: 20px;
+  font-size: 45px;
+  @media (max-width: 956px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
