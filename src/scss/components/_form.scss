@@ -87,3 +87,16 @@
     }
     
 }
+
+#form-result {
+    & > div {
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+    .success {
+        color: green;
+    }
+    .error {
+        color: $red;
+    }
+}

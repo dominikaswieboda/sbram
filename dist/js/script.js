@@ -77,8 +77,34 @@ $(document).ready(function () {
             message: 'To pole jest wymagane',
             check: 'Proszę zaznaczyć aby kontynuować',
         },
-        submitHandler: function (form) {
-            form.submit();
+        submitHandler: function () {
+            //Pobieramy dane
+            var name = $('input[name=name]').val();
+            var email = $('input[name=email]').val();
+            var phone = $('input[name=phone]').val();
+            var message = $('textarea[name=message]').val();
+
+            //Dane do wysłania
+            post_data = { 'name': name, 'email': email, 'phone': phone, 'message': message };
+
+            //Przesłanie danych poprzez AJAX
+            $.post('form.php', post_data, function (response) {
+                console.log(response);
+                //wczytanie danych zwrotnych JSON
+                if (response.type == 'error') {
+                    output = '<div class="error">' + response.text + '</div>';
+                    console.log('error');
+                } else {
+                    output = '<div class="success">' + response.text + '</div>';
+                    console.log('ok');
+                    //resetujemy wszystkie wartości
+                    $('#contact-form input').val('');
+                    $('#contact-form textarea').val('');
+                    $('#contact-form #check').prop('checked', false);
+                }
+
+                $("#form-result").hide().html(output).slideDown();
+            }, 'json');
         }
     });
 
